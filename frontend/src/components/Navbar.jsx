@@ -34,7 +34,7 @@ export default function Navbar({
   const mainNavTabs = [
     { id: 'overview', label: 'Overview', icon: LayoutDashboard },
     { id: 'carbon_source', label: 'Carbon by Source', icon: PieChart },
-    { id: 'local_map', label: 'Local Map', icon: MapPin },
+    { id: 'local_map', label: 'Map', icon: MapPin },
     { id: 'contributors', label: 'Contributors', icon: TrendingDown },
     { id: 'forecast', label: 'Impact Forecast', icon: Sliders },
     { id: 'challenges', label: 'Challenges', icon: Award },

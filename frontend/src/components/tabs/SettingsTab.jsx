@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { API_BASE_URL, fetchWithAuth } from '../../api';
 import { 
   User, 
@@ -40,7 +40,27 @@ export default function SettingsTab({
   const [feedback, setFeedback] = useState(null);
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
   const [downloadingESG, setDownloadingESG] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+  // Initialize theme from localStorage or default to 'dark'
+  const stored = typeof window !== 'undefined' ? localStorage.getItem('theme') : null;
+  return stored || 'dark';
+});
+
+// Apply theme class to <html> element and persist changes
+React.useEffect(() => {
+  const root = document.documentElement;
+  if (theme === 'dark') {
+    root.classList.add('dark');
+    root.classList.remove('light');
+  } else {
+    root.classList.add('light');
+    root.classList.remove('dark');
+  }
+  // Persist selection
+  try {
+    localStorage.setItem('theme', theme);
+  } catch {}
+}, [theme]);
 
   const avatarSrc = profile?.avatar_path 
     ? `${API_BASE_URL}${profile.avatar_path}?t=${avatarTimestamp || Date.now()}`
