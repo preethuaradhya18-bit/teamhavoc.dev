@@ -134,7 +134,7 @@ export default function App() {
       />
 
       {/* Main Tabbed Command Center Viewport */}
-      <main className="max-w-7xl mx-auto px-4 lg:px-8 py-8 relative z-10">
+      <main className="lg:pl-64 pt-20 lg:pt-8 max-w-7xl mx-auto px-4 lg:px-8 py-8 relative z-10">
         {activeTab === 'overview' && (
           <OverviewTab
             activity={activity}

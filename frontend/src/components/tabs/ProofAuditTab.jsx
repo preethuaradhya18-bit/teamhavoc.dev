@@ -120,7 +120,7 @@ export default function ProofAuditTab({ onCoinUpdate }) {
               <span>Anti-Greenwashing Verification Engine</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Document Proof Audit Hub
+              Doc Verification Hub
             </h1>
             <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-xl">
               Upload utility bills, fuel receipts, transit passes, or certificates. The backend cryptographic engine hashes documents to reject duplicates and awards Eco-Coin bounties upon approval.

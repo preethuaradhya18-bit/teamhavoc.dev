@@ -83,7 +83,7 @@ export default function OverviewTab({
               className="bg-gradient-to-r from-emerald-500 to-teal-500 text-black font-extrabold px-5 py-2.5 rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all text-xs font-mono flex items-center gap-2"
             >
               <ShieldCheck className="w-4 h-4" />
-              <span>Audit Document</span>
+              <span>Doc Verification</span>
             </button>
           </div>
         </div>
